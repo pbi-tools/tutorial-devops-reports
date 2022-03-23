@@ -1,0 +1,29 @@
+{
+    "version": "0.11",
+    "created": "2022-03-01T18:09:54.2556434+00:00",
+    "deployments": {
+      "Files": {
+        "mode": "Report",
+        "source": {
+          "type": "File",
+          "path": "./*.pbix$"
+        },
+        "authentication": {
+          "type": "ServicePrincipal",
+          "tenantId": "pbitools.org",
+          "clientId": "d3ab932a-f6dc-4a2e-b04d-a3f5a063394b",
+          "clientSecret": "%PBI_CLIENT_SECRET%"
+        },
+        "options": {
+          "import": {
+            "nameConflict": "CreateOrOverwrite"
+          }
+        },
+        "environments": {
+          "PROD": {
+            "workspace": "Reports DevOps Tutorial"
+          }
+        }
+      }
+    }
+  }
